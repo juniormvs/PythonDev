@@ -1,0 +1,18 @@
+Informações e regras sobre a linguagem Python
+
+Tipos de dados
+
+print(type(variavel))
+EX:
+
+print(type(f"Filme: {nome} ({ano})"))
+
+TIPOS UTILIZADOS PELO PYTHON
+
+<class 'str'>
+<class 'int'>
+<class 'list'>
+<class 'bool'>
+<class 'float'>
+
+

@@ -1,0 +1,35 @@
+ PYTHON É CASE SENSITIVE
+
+ ou seja
+
+ Mario Junior é diferente de Mário Junior ->, por conta de um ter o ascento cincunfexo e o outro não.
+
+Exemplo
+
+nome = "Mário Junior"
+nome2 = "Mario junior"
+
+print(nome == nome2)  # False
+
+
+#1 STRINGS MULTILINHAS - Deixa o texto exatamente do jeito que foi codificado.
+
+movieDescription = """O filme Top Gun Maverick é um filme de aviação e aventura muito consagrado na indústria cinematográfica."""
+
+movieDescription = """O filme Top Gun Maverick
+                            é um filme de aviação e aventura
+                              muito consagrado
+                              na
+                        indústria cinematográfica."""
+
+print(movieDescription) # Multiline string
+
+
+#2 PROCURAR UMA PALAVRA NA STRING
+
+print("top" in movieName)  # True
+print("ação" in movieDescription)  # True
+print("ação" not in movieDescription)  # False
+print("Aventura" in movieDescription)  # False Case sensitive
+print("Aventura" not in movieDescription)  # True Case sensitive
+

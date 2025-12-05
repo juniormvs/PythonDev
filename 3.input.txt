@@ -1,0 +1,38 @@
+Comando de entrada de dados
+
+input
+
+input("Digite o nome do filme\n") (\n serve para não ficar tudo na mesma linha)
+Por exemplo:
+
+Digite o nome do filme:
+__________ (o underline é para simbolizar onde o usuário vai digitar)
+
+print() -> Exibe o resultado digitado pelo usuário.
+
+OBS. Tudo o que entra pelo input é retornado como string. Para retornar os valores corretos é preciso fazer as devidas conversões.
+
+int(input("Ano do filme\n"))
+
+EXEMPLO DE CÓDIGO PARA MELHOR ENTENDIMENTO
+
+#Utilizando o input para receber dados do usuário
+nome = input("Digite o nome do filme: \n")
+ano = int(input("Digite o ano de lançamento do filme: \n"))
+nota = float(input("Digite sua avaliação para o filme (0.0 - 10.0): \n"))
+
+
+#IPRIME SOMENTE OS TIPOS DOS DADOS PASSADOS PELO USUÁRIO
+
+print("Tipo", type(nome))
+print("Tipo", type(ano))
+print("Tipo", type(nota))
+
+
+#PRINT exibindo o tipo e as devidas informações fornecidas pelo usuário
+#As informações dos tipos de valores já estão concatenadas com o valor de saída de cada print
+
+print("Tipo", type(nome), f"Filme: {nome}")
+print("Tipo", type(ano), f"Ano de Lançamento: {ano}")
+print("Tipo", type(nota), f"Sua Avaliação: {nota}/10")
+

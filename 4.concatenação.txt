@@ -1,0 +1,26 @@
+#Formas de contatenar as informações
+
+nome = input("Digite o nome do filme:\n")
+anoLancamento = input("Digite o ano de lançamento\n")
+notaFilme = input("Digite a nota do filme")
+
+#Alternativa 1
+
+print("Nome do filme", name)
+print("Ano de lançamento", anoLancamento)
+print("Nota do filme", notaFilme)
+
+#Alternativa 2
+
+print("nome do filme", name, "\nAno de lançamento", anoLancamento, "\nNota do filme", notaFilme)
+
+
+#Alternativa3 -> f string concatenando os valores
+
+utilizando o f string conforme no exemplo abaixo
+
+#ALETERNATIVA 3
+print(f"Nome do filme: {nome}\n"
+        f"Ano de lançamento: {ano}\n"
+        f"Nota do filme: {nota}"
+      )
