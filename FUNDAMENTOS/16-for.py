@@ -52,6 +52,8 @@ else:
     average = 0
 
 print(f"A média de avalição do filme {filmName} é {average:.2f}")
+# o :.2f formata o número para duas casas decimais
+
 
 
 
