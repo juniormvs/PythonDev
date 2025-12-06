@@ -1,0 +1,36 @@
+#TRABALHANDO COM ARGUEMENTOS EM FUNÇÕES
+
+#1 - Função para imprimir primeiro e último nome
+def full_name(first_name, last_name):
+    print(f"Nome é: {first_name} {last_name}")
+
+full_name("Mário", "Junior")
+
+#2 - Função para somar números
+def sum_numbers(a,b):
+    return a+b
+print(f"O retorno da soma é {sum_numbers(10,20)}")
+
+#3 - Função com parâmetro default
+def address(coutry="Brasil"):
+    print(f"Eu moro em {coutry}")
+
+address()
+address("Espanha")
+
+#4 - Função para avaliar filme
+
+def movie_average(num_ratings, movie_name):
+    total = 0
+    for i in range(num_ratings):
+        note = float(input("Digite a nota para o filme:\n"))
+        total += note
+
+    if num_ratings > 0:
+        average = total / num_ratings
+    else:
+        average = 0
+
+    print(f"Média de avaliação do filme {movie_name} foi de {average:.2}")
+
+movie_average(2, "O Máskara")
