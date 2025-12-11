@@ -1,0 +1,122 @@
+#tuplas são mais usadas para dados heterogêneos, ou seja, items de string e número tudo junto na mesma tupla (como o nome e as notas de um aluno).
+#tuplas são imutáveis, ou seja, não podem ser alteradas após a criação.
+#são representadas por parênteses () ao invés de colchetes [] como as listas.
+#são mais rápidas que as listas para operações de leitura.
+
+
+#Duas vantagens das tuplas em relação a listas: são mais rápidas e protegem seus scripts de sofrerem alterações. 
+# Se você armazenar sua senha em uma tupla, um hacker nunca vai conseguir mudar essa senha.
+
+filmsTuples = (
+    ("Inception", 2010, "Christopher Nolan"),
+    ("Interstellar", 2014, "Christopher Nolan"),
+    ("The Dark Knight", 2008, "Christopher Nolan"),
+    ("Pulp Fiction", 1994, "Quentin Tarantino"),
+    ("Fight Club", 1999, "David Fincher"),
+    ("Forrest Gump", 1994, "Robert Zemeckis")
+)
+
+print(type(filmsTuples))  # <class 'tuple'>
+
+
+tuplaFilmes = ("Matrix", "Volverine", "Clube da Luta", "O Senhor dos Anéis","Pulp Fiction")
+print(type(tuplaFilmes))
+
+#1 Buscar os dois primeiros itens da tupla
+print(filmsTuples[:2])  # ('Inception', 'Interstellar')
+
+#2 Buscar o último item da tupla
+print(filmsTuples[-1])  # ('Forrest Gump', 1994, 'Robert Zemeckis')
+
+#3 Buscar filmes até uma determinada posição
+print(filmsTuples[:3])
+
+#4 Buscar filmes de uma posição em diante
+print(filmsTuples[4:])
+
+#================================= Exemplos acima utilizando conceitos de slices/fatiamento ================================
+
+#5 Desempacotamento de tuplas
+filme1, filme2, filme3, filme4, filme5, filme6 = filmsTuples
+print(filme1)  # ('Inception', 2010, 'Christopher Nolan
+print(filme4)  # ('Pulp Fiction', 1994, 'Quentin Tarantino')
+#6 Somar elementos de uma tupla numérica
+tuplaNumeros = (10, 20, 30, 40, 50)
+soma = sum(tuplaNumeros)
+print(soma)  # 150
+#7 Verificar a existência de um item na tupla
+print("Inception" in filmsTuples)  # True
+print("Avatar" in filmsTuples)  # False
+#8 Iterar sobre os itens da tupla
+for filme in filmsTuples:
+    print(filme)
+#9 Contar quantas vezes um item aparece na tupla
+tuplaLetras = ('a', 'b', 'c', 'a', 'd', 'a')
+print(tuplaLetras.count('a'))  # 3
+#10 Obter o índice de um item na tupla
+print(tuplaLetras.index('c'))  # 2
+
+#11 Converter uma lista em tupla
+listaFrutas = ['maçã', 'banana', 'laranja']
+tuplaFrutas = tuple(listaFrutas)
+print(tuplaFrutas)  # ('maçã', 'banana', 'laranja')
+#12 Converter uma tupla em lista
+listaFrutasConvertida = list(tuplaFrutas)
+print(listaFrutasConvertida)  # ['maçã', 'banana', 'laranja']
+#13 Tuplas aninhadas
+tuplaAninhada = (("Inception", 2010), ("Interstellar", 2014), ("The Dark Knight", 2008))
+print(tuplaAninhada[1])  # ('Interstellar', 2014)
+print(tuplaAninhada[1][0])  # 'Interstellar'
+#15 Criar uma tupla com um único elemento
+tuplaUnicoElemento = (42,)
+print(type(tuplaUnicoElemento))  # <class 'tuple'>
+#16 Função zip para criar tuplas a partir de listas
+listaNomes = ['Alice', 'Bob', 'Charlie']
+listaIdades = [25, 30, 35]
+tuplaZip = tuple(zip(listaNomes, listaIdades))
+print(tuplaZip)  # (('Alice', 25), ('Bob', 30), ('Charlie', 35))
+#17 Desempacotamento com o operador *
+tuplaNumerosDesempacotados = (1, 2, 3, 4, 5)
+num1, *resto = tuplaNumerosDesempacotados
+print(num1)  # 1
+print(resto)  # [2, 3, 4, 5]
+#18 Usar tuplas como chaves em dicionários
+dicionarioTuplas = {('Inception', 2010): 'Christopher Nolan',
+                      ('Pulp Fiction', 1994): 'Quentin Tarantino'}
+print(dicionarioTuplas[('Inception', 2010)])  # 'Christopher Nolan'
+#19 Converter uma string em tupla de caracteres
+stringExemplo = "Python"
+tuplaCaracteres = tuple(stringExemplo)
+print(tuplaCaracteres)  # ('P', 'y', 't', 'h', 'o', 'n')
+#20 Contar o número de itens em uma tupla
+print(len(filmsTuples))  # 6    
+#21 Concatenar tuplas
+tupla1 = (1, 2, 3)
+tupla2 = (4, 5, 6)
+tuplaConcatenada = tupla1 + tupla2
+print(tuplaConcatenada)  # (1, 2, 3, 4, 5, 6)   
+#22 Repetir tuplas
+tuplaRepetida = tupla1 * 3
+print(tuplaRepetida)  # (1, 2, 3, 1, 2, 3, 1, 2, 3) 
+#23 Converter uma tupla em string
+tuplaParaString = ('P', 'y', 't', 'h', 'o', 'n')
+stringConvertida = ''.join(tuplaParaString)
+print(stringConvertida)  # 'Python'
+#24 Slicing avançado em tuplas
+tuplaSlicing = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(tuplaSlicing[::2])  # (0, 2, 4, 6, 8)
+print(tuplaSlicing[1::2])  # (1, 3, 5, 7, 9)
+#25 Verificar o maior e o menor valor em uma tupla numérica
+tuplaValores = (10, 3, 6, 2, 8, 15)
+print(max(tuplaValores))  # 15
+print(min(tuplaValores))  # 2
+
+#Buscar um item da tupla pelo nome ------------------- versão 1 Tupla homogênea
+print(tuplaFilmes.index("Pulp Fiction"))  # 3
+
+#Buscar um item da tupla pelo nome - versão 2 ----------versão 2 Tupla heterogênea
+print(filmsTuples.index(
+                            ("Pulp Fiction", 1994, "Quentin Tarantino")
+                        )
+    )  # 3
+
