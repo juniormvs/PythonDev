@@ -1,0 +1,13 @@
+Nome: Mario
+Endereço: rua 2
+Telefone: 009090909
+Nome: Maria
+Endereço: rua 3
+Telefone: 908980808
+Nome: José
+Endereço: rua 5
+Telefone: 998787998
+Nome: Amanda
+Endereço: rua 8
+Telefone: 98787987
+
